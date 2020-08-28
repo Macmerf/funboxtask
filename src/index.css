@@ -1,13 +1,197 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
 }
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  background-image: url('./img/Pattern.png'), linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root{
+  margin:0px;
+  padding:0px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+h1{
+  text-align: center;
+  text-shadow: 0 1px 0 #000000;
+  color: #ffffff;
+  font-family: "Exo 2.0- Thin";
+  font-size: 2.25rem;
+  margin-top:36px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+
+
+.app{
+  margin-top: 0%;
+  height: 100vh;
+}
+
+.Goodlist{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left:3.125vw;
+  padding-right:3.125vw;
+}
+.Goodlist div{
+  font-family: "Trebuchet MS";
+  width: 320px;
+  height: 480px;
+  margin-left: 3.125vw;
+  margin-right:3.125vw;
+  margin-bottom: 10px;
+}
+.foodseventh{
+  width: 80px;
+}
+
+.foodsixth{
+  margin-left:4px;
+  margin-bottom:4px;
+  float: left;
+}
+
+.foodfifth{
+  width: 127px;
+  color: #666666;
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 48px;
+}
+.foodforth{
+  margin-left: 48px;
+  width: 127px;
+  color: #666666;
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.foodthird{
+  margin-left: 48px;
+  color: #000000;
+  font-family: "Trebuchet MS";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.foodsecond{
+  color: #000000;
+  font-family: "Trebuchet MS";
+  font-size: 48px;
+  font-weight: 700;
+  margin-top:5px;
+  margin-left: 48px;
+}
+
+.foodfirst{
+  margin-top: 21px;
+  color: #666666;
+  font-family: "Trebuchet MS";
+  font-size: 16px;
+  margin-left: 48px;
+}
+
+
+
+
+
+.default{
+  background-image: url('./img/default.svg');
+  }
+
+  .enable{
+    background-image: url('./img/2-layers.svg');
+  }
+
+
+  .disabled{
+    background-image: url('./img/disabled.svg');
+  }
+  .disabled :nth-child(n){
+    opacity: 0.5;
+  }
