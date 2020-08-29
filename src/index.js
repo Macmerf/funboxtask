@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './fonts/fonts.css';
+import './reset.css'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import GoodsList from './components/GoodsList'
