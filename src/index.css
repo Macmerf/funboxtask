@@ -1,15 +1,21 @@
 
 body {
   margin: 0;
-  background-image: url('./img/Pattern.png'), linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: url('./img/Pattern.png');
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #root{
   margin:0px;
   padding:0px;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 h1{
@@ -27,29 +33,76 @@ h1{
 .app{
   margin-top: 0%;
   height: 100vh;
+  width: 100vw;
 }
 
 .Goodlist{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left:3.125vw;
   padding-right:3.125vw;
 }
-
 .good{
-  margin-left: 3.125vw;
-  margin-right:3.125vw;
+  margin-left: 3.12vw;
+  margin-right:3.12vw;
   height: 509px;
   width: 320px;
 }
 
-.Goodlist .default, .Goodlist .disabled, .Goodlist .enable{
-  font-family: "Trebuchet MS";
+@media screen and (max-width:1279px){
+  
+  .Goodlist{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left:1%;
+    padding-right:1%;
+  }
+
+  .good{
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+@media screen and (max-width:1023px){
+  .Goodlist{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .good{
+    margin-bottom: 20px;
+  }
+  .app{
+    height: 100%;
+  }
+}
+
+/* общий стиль для  блоков с товаром*/
+
+.Goodlist .default, .Goodlist .disabled, .Goodlist .enable{    
+  font-family: "Trebuchet MS"; 
   width: 320px;
   height: 480px;
   margin-bottom: 10px;
   position: relative;
 }
+  /*стилизация элементов товара номера от 1-7 самый верхний элемент под номером 1 */
 .foodseventh{
   width: 80px;
   height: 80px;
@@ -115,8 +168,7 @@ h1{
 }
 
 .foodfirst{
- line-height: 4;
-  color: #666666;
+  line-height: 4;
   font-family: "Trebuchet MS";
   font-size: 16px;
   margin-left: 48px;
@@ -124,10 +176,11 @@ h1{
 
 
 
-
+/* стили для товаров*/
 
 .default{
   background-image: url('./img/default.svg');
+  cursor: pointer;
   }
   .default .foodseventh{
     background-color: #1698d9;
@@ -135,6 +188,7 @@ h1{
 
   .enable{
     background-image: url('./img/2-layers.svg');
+    cursor: pointer;
   }
   .enable .foodseventh{
     background-color: #d91667;
@@ -150,6 +204,19 @@ h1{
 
   .disabled h2 , .disabled h3, .disabled p, .disabled img{
     opacity: 0.5;
+    color: #b3b3b3;
   }
- 
 
+  /* стилизация нижнего описания товара*/
+.textafter{
+  font-family: "Trebuchet MS";
+  font-size: 13px;
+  text-align: center;
+}
+
+.buyit{
+  color: #1698d9;
+  border-bottom:dashed 1px #1698d9;
+  cursor: pointer;
+  margin-top: 14px;
+}

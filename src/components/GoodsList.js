@@ -9,6 +9,7 @@ import foodcart from './data'
                 <div className ='Goodlist' >
                 {foodcart.map((good,index)=>
                 <Good 
+                    textAfter ={good.textAfter}
                     hovelem={good.hovelem}
                     shape={good.shape}
                     key ={index}

@@ -1,3 +1,5 @@
+//база данных товара. при добавлении нового обЬекта появится новая карточка. три состояния (default, enable, disable)
+
 export default[
     {
         hovelem:'Сказочное заморское яство',
@@ -6,7 +8,8 @@ export default[
         numb: [10,'','0,5'],
         gifts:'мышь в подарок',
         weight: ' кг',
-        shape:'default'
+        shape:'default',
+        textAfter:'Печень утки разварная с артишоками.'
 
     },
     {   
@@ -16,7 +19,8 @@ export default[
         numb: [40,2,2],
         gifts:' мыши в подарок',
         weight: ' кг' ,
-        shape:'enable'
+        shape:'enable',
+        textAfter:'Головы щучьи с чесноком да свежайшая сёмгушка.'
     },
     {   hovelem:'Сказочное заморское яство',
         taste: 'с курой',
@@ -24,7 +28,9 @@ export default[
         numb: [100,5,5],
         gifts:' мышей в подарок заказчк доволен',
         weight: ' кг',
-        shape: 'disabled'
+        shape: 'disabled',
+        textAfter:'Филе из цыплят с трюфелями в бульоне.'
     }
     
 ]
+
